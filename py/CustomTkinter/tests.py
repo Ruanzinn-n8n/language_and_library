@@ -6,19 +6,24 @@ window.geometry("500x300")
 frame = ctk.CTkFrame(window, width=300, height=200)
 frame.place(x=100, y=50)
 
+def read_write(a, b):
+    a = a.get()
+    b = b.get()
+    print(f"Nome do usuário: {a}\nIdade: {b}")
+
 name = ctk.CTkLabel(frame, text="Name:  ")
-name.grid(row=0, column=0)
+name.place(x=50, y=50)
 
 inputname = ctk.CTkEntry(frame)
-inputname.grid(row=0, column=1)
+inputname.place(x=110, y=50)
 
 age = ctk.CTkLabel(frame, text="Age:  ")
-age.grid(row=1, column=0)
+age.place(x=63, y=80)
 
 inputage = ctk.CTkEntry(frame)
-inputage.grid(row=1, column=1)
+inputage.place(x=110, y=80)
 
-confirm = ctk.CTkButton(frame, text="Confirm")
-confirm.grid(row=2, column=1)
+confirm = ctk.CTkButton(frame, text="Confirm", command=lambda:read_write(inputname, inputage))
+confirm.place(x=80, y=130)
 
 window.mainloop()
