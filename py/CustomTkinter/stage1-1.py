@@ -25,7 +25,7 @@ label.pack()
 """
 
 # Exercise 3: Form
-cont = ctk.CTkFrame(window)
+"""cont = ctk.CTkFrame(window)
 cont.grid(row=0, column=0, pady="100", padx="220")
 
 key = ctk.CTkLabel(cont, text="Key:")
@@ -46,8 +46,10 @@ i_desc.grid(row=2, column=1, pady="5", padx="10")
 confirm = ctk.CTkButton(window, text="Confirm")
 confirm.grid(row=1, column=0)
 # all is bad, but ok LOL
-
+"""
 
 # Exercise 4
+
+
 
 window.mainloop()
