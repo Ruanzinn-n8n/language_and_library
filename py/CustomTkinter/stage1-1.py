@@ -25,17 +25,8 @@ label.pack()
 """
 
 # Exercise 3: Form
-"""head = ctk.CTkFrame(window)
-head.pack(fill="x", pady="10")
-
-title = ctk.CTkLabel(head, text="Register")
-title.grid(row=0, column=0, padx="350")
-
-body = ctk.CTkFrame(window)
-body.pack(fill="both", expand="True")
-
-cont = ctk.CTkFrame(body)
-cont.grid(pady="50", padx="220")
+cont = ctk.CTkFrame(window)
+cont.grid(row=0, column=0, pady="100", padx="220")
 
 key = ctk.CTkLabel(cont, text="Key:")
 key.grid(row=0, column=0, pady="5", padx="10", sticky="e")
@@ -52,10 +43,10 @@ desc.grid(row=2, column=0, pady="5", padx="10", sticky="e")
 i_desc = ctk.CTkEntry(cont)
 i_desc.grid(row=2, column=1, pady="5", padx="10")
 
-confirm = ctk.CTkButton(body, text="Confirm")
+confirm = ctk.CTkButton(window, text="Confirm")
 confirm.grid(row=1, column=0)
 # all is bad, but ok LOL
-"""
+
 
 # Exercise 4
 
