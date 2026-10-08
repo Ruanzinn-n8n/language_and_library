@@ -48,8 +48,50 @@ confirm.grid(row=1, column=0)
 # all is bad, but ok LOL
 """
 
-# Exercise 4
+# Exercise 4: Frame within frame
+"""header = ctk.CTkFrame(window)
+header.pack(fill="x", pady="10", padx="5")
+l_head = ctk.CTkLabel(header, text="Header")
+l_head.pack()
 
+content = ctk.CTkFrame(window)
+content.pack(fill="both", padx="5")
 
+right = ctk.CTkFrame(content)
+right.grid(row=0, column=1, padx="3", pady="20")
+l_rgh = ctk.CTkLabel(right, text="Right")
+l_rgh.pack(pady="150", padx="150")
+
+left = ctk.CTkFrame(content)
+left.grid(row=0, column=0, padx="18", pady="20")
+l_lft = ctk.CTkLabel(left, text="Left")
+l_lft.pack(pady="150", padx="150")
+"""
+
+# Exercise 5: Little DevBoard
+header = ctk.CTkFrame(window)
+header.pack(fill="x", pady="15", padx="10")
+l_h = ctk.CTkLabel(header, text="DevBoard")
+l_h.pack(pady="10")
+
+content = ctk.CTkFrame(window)
+content.pack(padx=20, pady=(20, 10))
+
+def read_print(a, b):
+    a = a.get()
+    b = b.get()
+    print(f"Key: [{a}]\nShort: [{b}]")
+
+key = ctk.CTkLabel(content, text="Key:")
+input_key = ctk.CTkEntry(content)
+short = ctk.CTkLabel(content, text="Short:")
+input_short = ctk.CTkEntry(content)
+confirm = ctk.CTkButton(window, text="Confirm", command=lambda: read_print(input_key, input_short))
+
+key.grid(row=0, column=0, padx=(40, 5), pady=(40, 5))
+input_key.grid(row=0, column=1, padx=(5, 40), pady=(40, 5))
+short.grid(row=1, column=0, padx=(40, 5), pady=(5, 40))
+input_short.grid(row=1, column=1, padx=(5, 40), pady=(5, 40))
+confirm.pack() # i left it out the Content for keep it aligned in center
 
 window.mainloop()
